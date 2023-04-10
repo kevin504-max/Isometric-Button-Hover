@@ -26,7 +26,7 @@ ul {
 }
 
 ul li {
-    position: relativee;
+    position: relative;
     display: grid;
     place-items: center;
     width: 200px;
@@ -125,11 +125,37 @@ li .icon {
 }
 
 .base:hover + .title + .icon {
-    transform: rotateY(30deg) skewY(-24deg) translateY(-360px);
-    -webkit-transform: rotateY(30deg) skewY(-24deg) translateY(-360px);
-    -moz-transform: rotateY(30deg) skewY(-24deg) translateY(-360px);
-    -ms-transform: rotateY(30deg) skewY(-24deg) translateY(-360px);
-    -o-transform: rotateY(30deg) skewY(-24deg) translateY(-360px);
+    transform: rotateY(30deg) skewY(-24deg) translateY(-160px);
+    -webkit-transform: rotateY(30deg) skewY(-24deg) translateY(-160px);
+    -moz-transform: rotateY(30deg) skewY(-24deg) translateY(-160px);
+    -ms-transform: rotateY(30deg) skewY(-24deg) translateY(-160px);
+    -o-transform: rotateY(30deg) skewY(-24deg) translateY(-160px);
     color: var(--color);
     filter: drop-shadow(0 0 3px var(--color));
+    animation: wave 1s ease-in-out infinite;
+    -webkit-animation: wave 1s ease-in-out infinite;
+}
+
+.base:hover + .title {
+    transform: rotateY(30deg) skewY(-24deg) translateY(-90px);
+    -webkit-transform: rotateY(30deg) skewY(-24deg) translateY(-90px);
+    -moz-transform: rotateY(30deg) skewY(-24deg) translateY(-90px);
+    -ms-transform: rotateY(30deg) skewY(-24deg) translateY(-90px);
+    -o-transform: rotateY(30deg) skewY(-24deg) translateY(-90px);
+    color: var(--color);
+    text-shadow: 0 0 3px var(--color);
+    transition-delay: 0.1s;
+    opacity: 1;
+    animation: wave 1s ease-in-out infinite;
+    -webkit-animation: wave 1s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        margin-bottom: 0;
+    }
+
+    50% {
+        margin-bottom: 15px;
+    }
 }
